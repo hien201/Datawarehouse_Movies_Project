@@ -40,8 +40,10 @@ Data Model:
 - create_table và main_create_table: tạo các bảng tạm và bảng chính trên Goggle Bigquery
 - upload_BIGQUERY.py  và main_upload_BIGQUERY.py: upload data từ 3 file csv trên GCS vào các bảng tạm trên BIGQUERY
 - upsert_target_table.py: merget dữ liệu từ các bảng tạm vào bảng chính tùy theo điều kiện. 
+- parameter.py & sql_create_table.py: chứa biến để chạy các module trên
 
-## 7. Nâng cao:
+
+## 7. Cải thiện:
 - Tiến tới sử dụng Airflow để chạy ETL: quản lý và điều phối tác vụ. 
 
 
