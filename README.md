@@ -1,5 +1,5 @@
 # Datawarehouse_Movies_Project
-## 1. DESCRIPTION:
+## 1. MÔ TẢ VỀ PROJECT:
 ### 1.1 Mục đích:  
 - Dựa trên dữ liệu nguồn xây dựng DW movies từ đó xây dựng hệ thống giới thiệu/ đề xuất phim và phân tích các yếu tố ảnh hưởng đến doanh thu.
 ### 2. Phân tích yêu cầu:
