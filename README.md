@@ -24,7 +24,7 @@ Từ DW này phải trả lời được các câu hỏi kinh doanh sau:
 ## 3. Xây dựng Data Warehouse:
 ---
 - lựa chọn mô hình dữ liệu galaxy
-Data Model:
+- Data Model:
 
 ![image](https://user-images.githubusercontent.com/90466915/226553184-e7b60a99-3aa9-4bec-a18f-7ca38766b059.png)
 
