@@ -42,8 +42,10 @@ Data Model:
 - upsert_target_table.py: merget dữ liệu từ các bảng tạm vào bảng chính tùy theo điều kiện. 
 - parameter.py & sql_create_table.py: chứa biến để chạy các module trên
 
+## 7. Chạy ETL:
+main_create_table → main_upload_GCS → main_upload_BIGQUERY → upsert_target_table → check data on BIGQUERY
 
-## 7. Cải thiện:
+## 8. Cải thiện:
 - Tiến tới sử dụng Airflow để chạy ETL: quản lý và điều phối tác vụ. 
 
 
