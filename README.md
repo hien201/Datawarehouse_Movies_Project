@@ -28,19 +28,25 @@ Với vai trò là một kỹ sư dữ liệu, tôi muốn xây dựng một mô
 * Phải xây dựng DW trên nền tảng đám mây (Bigquery)
 * ETL phải đảm bảo được khả năng vận hành khi lượng dữ liệu tăng lên nhanh chóng.
 
-## 2. Đọc dữ liệu:
----
-- movies_metadata: dữ liệu chính chứa thông tin về 45.000 phim. Bao gồm các columns sau: posters, backdrops, budget, revenue, release dates, languages, production countries, companies. 
-→ đây là bảng dim 
+## 3. Thu thập và khai phá dữ liệu:
 
-- Rating: chứa thông tin về việc đánh giá các bộ phim của người dùng, bao gồm các column sau: movie_id, user_id, rating
-→ đây là  bảng fact
+**movies_metadata**:
+  *  Dữ liệu chứa 26 triệu đánh giá người dùng của hơn 270.000 người dùng trên bộ sưu tập hơn 45.000 phim.
+  *  Bao gồm các columns sau: posters, backdrops, budget, revenue, release dates, languages, production countries, companies.
+  *  Nguồn: https://www.kaggle.com/rounakbanik/the-movies-dataset
 
-- CPI: chứa thông tin về chỉ số giá tiêu dùng theo từng ngày, bắt đầu từ năm 2000 đến nay. 
-→ bảng fact
+ **Rating**: 
+ * Chứa thông tin về việc đánh giá các bộ phim của người dùng
+ * Bao gồm các column sau: movie_id, user_id, rating
+ * Nguồn: https://www.kaggle.com/rounakbanik/the-movies-dataset
+ 
+**CPI:**
+* Chứa thông tin về chỉ số giá tiêu dùng theo từng ngày, bắt đầu từ năm 2000 đến nay.
+* Dữ liệu này giúp đánh giá/tính toán doanh thu phòng vé so với lạm phát các năm
+* Nguồn: https://fred.stlouisfed.org/series/CUSR0000SS62031
 
 ## 3. Xây dựng Data Warehouse:
----
+
 - lựa chọn mô hình dữ liệu galaxy
 - Data Model:
 
