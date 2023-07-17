@@ -1,7 +1,7 @@
 # Datawarehouse_Movies_Project
 ## 1. Mô tả Project:
----
-### Giới thiệu:  
+
+
 MovieLens là một hệ thống đề xuất phim phi thương mại trên nền tảng web. Nó được tạo ra vào năm 1997 và vận hành bởi GroupLens, một phòng nghiên cứu tại Đại học Minnesota, nhằm thu thập dữ liệu đánh giá phim phục vụ mục đích nghiên cứu.
 
 Với vai trò là một kỹ sư dữ liệu, tôi muốn xây dựng một mô hình dữ liệu để người dùng cuối cùng có thể khai thác được dữ liệu liên quan đến các bộ phim trong tập dữ liệu Movielens và dữ liệu vể chỉ số giá tiêu dùng để trả lời các câu hỏi kinh doanh:
@@ -14,16 +14,17 @@ Với vai trò là một kỹ sư dữ liệu, tôi muốn xây dựng một mô
 * Phân tích yêu cầu và phân tích dữ liệu nguồn --> xây dựng DW phù hợp
 * Xây dựng ETL pipeline để trích xuất, chuyển đổi- xử lý và tải dữ vào DW đã thiết kế.
   
-### 1.2. Phân tích yêu cầu:
-Về mặt nghiệp vụ: 
+## 2. Phân tích yêu cầu và scop dự án:
+
+**Về mặt nghiệp vụ:**
 * DW phải đáp ứng được yêu cầu là trả lời được các câu hỏi kinh doanh tôi đã đề cập ở mục "Giới thiệu"
 
-Về mặt dữ liệu:
+**Về mặt dữ liệu:**
 * Dữ liệu phải đảm bảo toàn vẹn
 * Các vấn đề của dữ liệu phải được dọn dẹp, xử lý trước khi tải vào DW
 * Dữ liệu trong DW không được trùng lặp
 
-Về mặt công nghệ:
+**Về mặt công nghệ:**
 * Phải xây dựng DW trên nền tảng đám mây (Bigquery)
 * ETL phải đảm bảo được khả năng vận hành khi lượng dữ liệu tăng lên nhanh chóng.
 
