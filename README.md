@@ -45,6 +45,15 @@ Với vai trò là một kỹ sư dữ liệu, tôi muốn xây dựng một mô
 * Dữ liệu này giúp đánh giá/tính toán doanh thu phòng vé so với lạm phát các năm
 * Nguồn: https://fred.stlouisfed.org/series/CUSR0000SS62031
 
+## 4. Xác định các bảng trong DW:
+Cần phải xác định được DW sẽ được tổ chức như thế nào? gồm những bảng nào?
+Trong dự án này, tôi xác định DW sẽ có:
+* 2 vùng: Staging và Mart
+* 2 loại bảng: Dim và Fact
+* Tổng cộng 14 bảng
+
+
+
 ## 3. Xây dựng Data Warehouse:
 
 - lựa chọn mô hình dữ liệu galaxy
