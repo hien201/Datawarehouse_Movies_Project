@@ -48,7 +48,7 @@ Với vai trò là một kỹ sư dữ liệu, tôi muốn xây dựng một mô
 ## 4. Xác định các bảng trong DW:
 Cần phải xác định được DW sẽ được tổ chức như thế nào? gồm những bảng nào?
 Trong dự án này, tôi xác định DW sẽ có:
-* 2 vùng: Staging và Mart
+* 2 vùng: Stage và Target
 * 2 loại bảng: Dim và Fact
 * Tổng cộng 9 bảng
 ![image](https://github.com/hien201/Google_Bigquery_DataWarehouse/assets/90466915/f542cc7b-579e-4485-b25a-1ef0f3a395f6)
