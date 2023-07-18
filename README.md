@@ -13,11 +13,11 @@ Với vai trò là một kỹ sư dữ liệu, tôi muốn xây dựng một mô
 Để làm được điều đó, trong Project này tôi sẽ tập chung vào 2 phần chính:
 * Phân tích yêu cầu và phân tích dữ liệu nguồn --> xây dựng DW phù hợp
 * Xây dựng ETL pipeline để trích xuất, chuyển đổi- xử lý và tải dữ vào DW đã thiết kế.
-  
+-----------------------------------  
 ## 2. Phân tích yêu cầu và scop dự án:
 
 **Về mặt nghiệp vụ:**
-* DW phải đáp ứng được yêu cầu là trả lời được các câu hỏi kinh doanh tôi đã đề cập ở mục "Giới thiệu"
+* DW phải đáp ứng được yêu cầu là trả lời được các câu hỏi kinh doanh tôi đã đề cập ở mục "Mô tả Project"
 
 **Về mặt dữ liệu:**
 * Dữ liệu phải đảm bảo toàn vẹn
@@ -27,7 +27,7 @@ Với vai trò là một kỹ sư dữ liệu, tôi muốn xây dựng một mô
 **Về mặt công nghệ:**
 * Phải xây dựng DW trên nền tảng đám mây (Bigquery)
 * ETL phải đảm bảo được khả năng vận hành khi lượng dữ liệu tăng lên nhanh chóng.
-
+-----------------------------------
 ## 3. Thu thập và khai phá dữ liệu:
 
 **movies_metadata**:
@@ -51,44 +51,34 @@ Trong dự án này, tôi xác định DW sẽ có:
 * 2 vùng: Staging và Mart
 * 2 loại bảng: Dim và Fact
 * Tổng cộng 9 bảng
-![image](https://github.com/hien201/Google_Bigquery_DataWarehouse/assets/90466915/5bc0309b-8011-4ad4-b291-fcd86c3e55dd)
+![image](https://github.com/hien201/Google_Bigquery_DataWarehouse/assets/90466915/f542cc7b-579e-4485-b25a-1ef0f3a395f6)
 
 -------------------------------
-## 3. Mô hình dũ liệu:
+## 5. Mô hình dũ liệu:
+ Data Model:
 
-- lựa chọn mô hình dữ liệu galaxy
-- Data Model:
+![image](https://github.com/hien201/Google_Bigquery_DataWarehouse/assets/90466915/a4f52f1a-da8e-4b13-888c-8c03f37d28aa)
 
-![image](https://user-images.githubusercontent.com/90466915/226553184-e7b60a99-3aa9-4bec-a18f-7ca38766b059.png)
+## 6. Architecture:
 
-## 4. Ý tưởng thực hiện :
----
-- Download bộ dataset từ Kaggle và Fred xuống local
-- Sử dụng Google Cloud Platform để xây dựng ETL
-- Từ local thực hiện ETL dữ liệu lên bảng tạm trên BIGQUERY
-- Từ các bảng tạm sẽ merge data vào bảng chính theo các điều kiện nhất định.
-
-## 5. Architecture:
----
-- Dựa trên phân tích và ý tưởng trên, lựa chọn kiến trúc như sau:
+- ựa chọn kiến trúc như sau:
 
 ![image](https://user-images.githubusercontent.com/90466915/226554013-2e34633a-326e-4e40-9cf7-7910d3f98177.png)
 
-## 6. Project Structure:
----
+## 7. Project Structure:
+
 - upload_to_GCS và main_upload_to_GCS.py: upload file movie_meta.csv, rating.csv, cpi.csv từ local lên GCS
 - create_table và main_create_table: tạo các bảng tạm và bảng chính trên Goggle Bigquery
 - upload_BIGQUERY.py  và main_upload_BIGQUERY.py: upload data từ 3 file csv trên GCS vào các bảng tạm trên BIGQUERY
 - upsert_target_table.py: merget dữ liệu từ các bảng tạm vào bảng chính tùy theo điều kiện. 
-- parameter.py & sql_create_table.py: chứa biến để chạy các module trên
+- parameter.py: lưu trữ parameter
+-  sql_create_table.py: câu lệnh tạo, xóa và truy vấn db
 
-## 7. Chạy ETL:
----
+## 8. Chạy ETL:
+
 main_create_table → main_upload_GCS → main_upload_BIGQUERY → upsert_target_table → check data on BIGQUERY 
 
-## 8. Cải thiện:
----
-- Tiến tới sử dụng Airflow để chạy ETL: quản lý và điều phối tác vụ. 
+
 
 
 
