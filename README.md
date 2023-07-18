@@ -50,11 +50,11 @@ Cần phải xác định được DW sẽ được tổ chức như thế nào?
 Trong dự án này, tôi xác định DW sẽ có:
 * 2 vùng: Staging và Mart
 * 2 loại bảng: Dim và Fact
-* Tổng cộng 14 bảng
+* Tổng cộng 9 bảng
+![image](https://github.com/hien201/Google_Bigquery_DataWarehouse/assets/90466915/5bc0309b-8011-4ad4-b291-fcd86c3e55dd)
 
-
-
-## 3. Xây dựng Data Warehouse:
+-------------------------------
+## 3. Mô hình dũ liệu:
 
 - lựa chọn mô hình dữ liệu galaxy
 - Data Model:
